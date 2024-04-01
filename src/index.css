@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background:#F5F6F0;
+    overflow-x: hidden;
+}
+.custom-bg{
+    background: rgb(244,191,111);
+background: linear-gradient(270deg, rgba(244,191,111,1) 0%, rgba(247,219,214,1) 100%);
+border: 3px solid black;
+}
+
+
+.progress-bar {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(hotpink 25%, pink 0);    
+  }
