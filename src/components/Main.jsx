@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TbDotsVertical } from "react-icons/tb";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { useModal } from '../context/ModalContext';
 
 const projects = [{
     url: "https://images.pexels.com/photos/6679623/pexels-photo-6679623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -15,15 +16,13 @@ const projects = [{
 const Main = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleModal = () => {
-        setIsModalOpen(prev => !prev)
-    };
+    const { handleModal } = useModal();
 
     return (
-        <div className='w-[100vw] h-[65vh] flex justify-center items-center mt-6'>
-            <div className='innerBox bg-[#FFFFFF] w-[95%] h-[100%] pb-10 flex flex-col'>
-                <div className='inner-bar h-[10%] flex items-center mt-6 justify-between px-10'>
-                    <span className='flex items-center gap-4'>
+        <div className='w-[100vw]  flex justify-center items-center '>
+            <div className='innerBox bg-[#FFFFFF] w-[95%]  pb-10 flex flex-col'>
+                <div className='inner-bar h-[10%] flex items-center mt-6 justify-between px-10 '>
+                    <span className='flex items-center gap-4 '>
                         <i className="fa-regular fa-folder-closed text-2xl"></i>
                         <div className=''>
                             <h1 className='font-bold text-xl'>Default Project</h1>
@@ -36,8 +35,8 @@ const Main = () => {
                     </span>
                 </div>
 
-                <div className='card-section w-full min-h-[80%] flex justify-start gap-[5%] items-center mt-2 px-10 flex-wrap'>
-                    <div className='card-container flex w-[100%] rounded-sm gap-5'>
+                <div className='card-section w-full min-h-[80%] flex justify-start gap-[5%] items-center mt-2 px-10 flex-wrap  ' >
+                    <div className='card-container flex w-[100%] rounded-sm gap-5  mobile-layout'>
 
                         {projects.map((project, index) => (
                             <div key={index} className='card border-[#cecece] border-2 rounded-sm pb-2 ' >
@@ -47,8 +46,8 @@ const Main = () => {
                             </div>
                         ))}
 
-                        <div className='card rounded-md pb-2 min-w-[30%] flex items-center justify-center bg-[#F9FAF5]'>
-                            <div className='plus-sign text-center text-5xl border-[#aaaaaa] border-2 rounded-full h-[60px] w-[60px] text-[#aaaaaa]'>+</div>
+                        <div className='card rounded-md  min-w-[30%] flex items-center justify-center bg-[#F9FAF5] p-5'>
+                            <div className='plus-sign text-center text-5xl border-[#aaaaaa] border-2 rounded-full h-[60px] w-[60px] text-[#aaaaaa] '>+</div>
                         </div>
                     </div>
                 </div>
