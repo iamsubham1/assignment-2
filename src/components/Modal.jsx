@@ -34,13 +34,15 @@ const Modal = () => {
                 </form>
 
 
-                <div className='mt-[25%] flex w-[100%] items-center justify-between'>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
+                <div className='mt-[25%] flex w-[100%] items-center gap-2 responsiveModal'>
+                    <div className='flex items-center gap-2'>
+                        <label className="switch">
+                            <input type="checkbox" />
+                            <span className="slider round"></span>
+                        </label>
+                        <p className='font-semibold'>AI Assistance</p>
 
-                    <button className='bg-[#dadada] px-4 py-2 rounded-md text-[#ffffff] ' id='createbtn'>Create Storyboard</button>
+                    </div>                  <button className='bg-[#dadada] px-4 py-2 rounded-md text-[#ffffff] place-self-end ml-auto' id='createbtn'>Create Storyboard</button>
                 </div>
 
 
