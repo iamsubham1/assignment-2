@@ -41,13 +41,13 @@ const Main = () => {
                         {projects.map((project, index) => (
                             <div key={index} className='card border-[#cecece] border-2 rounded-sm pb-2 ' >
                                 <img src={project.url} className='w-[100%] max-h-[90%]' alt="Project" />
-                                <h1 className='ml-2'>{project.title}</h1>
-                                <p className='ml-2'>{project.info}</p>
+                                <h1 className='ml-2 mt-2 font-medium '>{project.title}</h1>
+                                <p className='ml-2 mt-1 font-normal text-xs text-[#afafaf]'>{project.info}</p>
                             </div>
                         ))}
 
-                        <div className='card rounded-md  min-w-[30%] flex items-center justify-center bg-[#F9FAF5] p-5'>
-                            <div className='plus-sign text-center text-5xl border-[#aaaaaa] border-2 rounded-full h-[60px] w-[60px] text-[#aaaaaa] '>+</div>
+                        <div className='card rounded-md min-w-[30%] flex items-center justify-center bg-[#F9FAF5] p-5 customhover ' onClick={handleModal}>
+                            <div className='plus-sign text-center text-5xl border-[#aaaaaa] border-2 rounded-full h-[60px] w-[60px] text-[#aaaaaa] grid place-content-center '>+</div>
                         </div>
                     </div>
                 </div>
